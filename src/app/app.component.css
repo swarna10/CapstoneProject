@@ -1,0 +1,40 @@
+.heading{
+background-color: yellow;
+color: red;
+text-align: center;
+}
+*{
+box-sizing: border-box;
+margin-top: 0px;
+margin-bottom:0px;
+color:brown;
+
+}
+.col{
+float: left;
+padding: 20px;
+height: 520px;
+}
+.col.left{
+border-style:solid;
+background-color:bisque;
+float:left;
+width:15%;
+}
+
+
+
+.col.right{
+border-style:solid;
+background-color:bisque;
+float:left;
+width:15%;
+
+}
+
+.col.middle{
+border-style:solid;
+background-color:bisque;
+float:left;
+width:70%;
+}

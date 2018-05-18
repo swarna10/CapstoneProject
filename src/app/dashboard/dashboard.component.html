@@ -1,0 +1,53 @@
+<!-- https://bootsnipp.com/snippets/mMr2l*/
+<div class="body">
+	<div class="container">
+
+		<form>
+			<input type="text"	placeholder="Type Message">
+		</form>
+	</div>
+</div>
+-->
+<div class="body">
+    <div class="heading">
+      <span>{{title}} </span>
+      <div class="signout">
+        <span (click)="signOut()">Sign Out<i class="glyphicon glyphicon-log-out"></i></span>
+      </div>
+      <div class="newCircle">
+        <a routerLink="/createCircle" class="txt2">
+          Create Group
+        </a>
+      </div>
+    </div>
+    <div class="left">
+      <div id="tabs">
+        <input type="radio" id="tab1" name="tabs" checked><label
+          for="tab1">Chats</label> <input type="radio" id="tab2" name="tabs"><label
+          for="tab2">Group</label>
+        <section id="friends">
+          <app-user (selectedUser)="onSelect($event)"></app-user>
+        </section>
+  
+        <section id="group">
+            <font color="white">
+          <app-circle (selectedCircle)="onSelect($event)"></app-circle>
+        </font>
+        </section>
+      </div>
+    </div>
+  
+    <div>
+      <!--	<div class="column left">
+       <app-user></app-user> 
+      <app-users (selectedUser)="onSelect($event)"></app-users>
+    </div>
+    <div class="column right">
+      <!-- <app-circle></app-circle> 
+      <app-circle (selectedCircle)="onSelect($event)"></app-circle>
+    </div>-->
+      <div class="column middle">
+        <app-message [messageObj]="currentSelected"></app-message>
+      </div>
+    </div>
+  </div>

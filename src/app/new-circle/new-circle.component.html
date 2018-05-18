@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-sm-1 col-md-4 col-lg-2"></div>
+    <div id="registeropt" class="col-12 col-sm-1 col-md-6 col-lg-8">
+      <form ngNativeValidate style="border:1px solid #ccc" #form="ngForm" (ngSubmit)="registerform(form)">
+        <div ng-show="error" class=" alert-danger">{{error}}</div>
+
+        <div class="container">
+          <h1>Create Circle</h1>
+          <p>Please fill in this form to create an circle.</p>
+          <hr>
+
+          <label for="circlename">
+            <b>CircleName</b>
+          </label>
+          <input type="text" placeholder="Enter Circle Name" required="" name="circleName" ngModel>
+
+          <div class="clearfix">
+            <button type="submit" class="cancelbtn" routerLink="/dashboard">Cancel</button>
+            <button type="submit" class="signupbtn" autofocus>Create</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-12 col-sm-1 col-md-4"></div>
+  </div>
+</div>

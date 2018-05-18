@@ -1,0 +1,25 @@
+<!--<div class="columns">
+    <div class="cir">
+        <ul>
+            <li *ngFor='let circle of circles' (click)='selectCircle(circle.circleName)'>
+  
+                {{circle.circleName}}
+            </li>
+        </ul>
+    </div>
+</div>-->
+<div class="container-fluid">
+        <h2 align="center">
+          <b style="color: rgb(25, 0, 255)"> {{ appname }}</b>
+          <a (click)="createcircle()"><i class=" addbt far fa-plus-square"></i></a>
+        </h2>
+        <!--<div *ngIf="circles.length>0">-->
+        <div class="scroll-area2">
+          <ul *ngFor="let data of circles" class="list-unstyled" (click)="selectCircle(data.circleName)">
+            <li>
+              <button type="button" class="btn btn-success btn-block">{{data.circleName}}</button>
+            </li>
+          </ul>
+        </div>
+        <!--</div>-->
+      </div>

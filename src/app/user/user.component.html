@@ -1,0 +1,31 @@
+<!-- <p>
+  Users
+</p>
+    <div class="columns">
+        <div class="user">
+            <ul class="users">
+                <li class="lists" *ngFor='let user of users'>
+                  {{user.name}}
+                 </li>
+          </ul>
+    </div>
+ </div>-->
+ <div class="container-fluid">
+        <h2 align="center">
+          <b style="color: rgb(25, 0, 255)"> {{ appname }}</b>
+          <!-- <a (click)="createuser()"><i class="addbt far fa-plus-square"></i></a> -->
+        </h2>
+       <!-- <div *ngIf="users.length>0">-->
+          <div class="scroll-area1">
+              <input type="text" id="myInput" onkeyup="myFunction" placeholder="Search for names.." title="Type in a name">
+          <ul id="myUL"
+          class="list-unstyled">
+            <li  *ngFor="let data of users" (click)="selectUser(data.username)" >
+              <button type="button" class="btn btn-success btn-block ">{{data.username}}</button>
+            </li>
+          </ul>
+          </div>
+          <!--<p *ngIf="users.length>2">Users More Than 3</p> -->
+        <!--</div>-->
+      </div>
+      

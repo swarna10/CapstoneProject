@@ -1,0 +1,26 @@
+<div id="register" class="animate form">
+    <form #signupform="ngForm" (ngSubmit)="register(signupform)" role="form" class="login100-form validate-form" method="post" action="/login">
+    <h1> Sign up </h1> 
+    <p> 
+        <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
+        <input class="input100" type="text" name="email" id="name" autocomplete="off" ngModel>
+   </p>
+    <p> 
+      <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+      <input class="input100" type="text" name="username" id="username" autocomplete="off" ngModel>
+    </p>
+    <p> 
+      <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+      <input class="input100" type="password" name="password" id="password" ngModel>
+    </p>
+      <p class="signin button"> 
+      <input type="submit" value="Sign up"/> 
+    </p>
+    <p class="change_link">  
+      Already a member ?
+      <a routerLink="" class="txt2">
+          Login
+        </a>
+    </p>
+  </form>
+</div>

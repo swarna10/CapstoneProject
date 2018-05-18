@@ -1,0 +1,66 @@
+<div>
+
+
+	<div *ngIf="type==='circle'; then thenBlock else elseBlock"></div>
+	<ng-template #thenBlock>
+	  <h1 align="center">
+		<b class="upper" style="color: rgb(25, 0, 255);"> {{ appname }}</b>
+	  </h1>
+	</ng-template>
+	<ng-template #elseBlock>
+	  <h1 align="center">
+		<b class="upper" style="color: rgb(25, 0, 255);"> {{ appname }}</b>
+	  </h1>
+	</ng-template>
+	<div *ngFor="let data of messages" id="messagedisplay">
+	  <div class="container-fluid">
+		<div class="container">
+		  <div class="row">
+			<div *ngIf=" (data.receiverId==userlogobj) ||(data.receiverId==null && data.senderName!=userlogobj); then thenBlock else elseBlock">
+			</div>
+			<ng-template #thenBlock>
+			  <div class="col-12 col-sm-6">
+				<H6>
+				  <i>{{data.senderName}}:</i>
+				</H6>
+				{{data.message}}
+				<br/>
+			   
+			  </div>
+			</ng-template>
+			<ng-template #elseBlock>
+			  <div class="col-12 col-sm-6"></div>
+			  <div class="col-12 col-sm-6 sendmessage">
+				<font size="4" color="pink">		
+				<H6>
+				  <i>:{{data.senderName}}</i>
+				</H6>
+			</font>
+			<font size="5" color="pink">	
+				{{data.message}}
+			</font>
+				<!--  <br/> {{data.sender}} sent message 
+					  to {{data.receiver}} -->
+				<br/>
+				
+			  </div>
+			</ng-template>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+	<div>
+	  <div class="input-group">
+		<input name="message" type="text" class="form-control" placeholder="Enter Your Message" [(ngModel)]='message' autocomplete="off"
+		/>
+		<div class="input-group-append">
+  
+		  <button (click)="onClick(message,type)" type="submit" class="btn btn-primary submitMsg" type="button" style="height:0.5cm; width:1.5cm">
+			<i class="far fa-comment-alt">Send</i>
+		  </button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>

@@ -1,0 +1,30 @@
+<div id="container_demo" >
+	<!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+	<a class="hiddenanchor" id="toregister"></a>
+	<a class="hiddenanchor" id="tologin"></a>
+	<div id="wrapper">
+		<div id="login" class="animate form">
+        <form #form="ngForm" (ngSubmit)="logform(form)" role="form" class="login100-form validate-form" method="post" action="/login">
+				<h1>Log in</h1> 
+				<p> 
+					<label for="username" class="uname" data-icon="u" >username </label>
+          <input class="input100" type="text" name="username" id="username" autocomplete="off" blur="myFunction()" required ngModel>
+				</p>
+				<p> 
+					<label for="password" class="youpasswd" data-icon="p"> Your password </label>
+					<input class="input100" type="password" name="password" id="password" required ngModel>
+				</p>
+				<p class="login button"> 
+					<input type="submit" value="Login" /> 
+				</p>
+				<p class="change_link">
+					Not a member yet ?
+					<a routerLink="register" class="txt2">
+							Sign Up
+						</a>
+				</p>
+			</form>
+		</div>
+		
+	</div>
+</div>  
